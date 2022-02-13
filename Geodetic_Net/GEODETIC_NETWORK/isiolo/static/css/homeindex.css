@@ -1,0 +1,153 @@
+/*
+THIS IS ORIGINAL DESIGN!!
+*/
+
+@font-face{
+    src: url('../fonts/OpenSans-Regular.ttf');
+    font-family: 'OpenSans';
+    font-weight: normal;
+}
+@font-face{
+    src: url('../fonts/Roboto-Regular.ttf');
+    font-family: 'Roboto';
+    font-weight: normal;
+}
+
+/*....GLOBAL STYLING....*/
+*,html,body {
+  padding: 0;
+  margin:0;
+}
+
+/*.....BODY STYLING ....*/
+body{
+  font-family: 'Roboto';
+  font-size: 0.8em;
+  font-weight: normal;
+}
+ul li{
+  list-style-type: none;
+}
+
+/*............TOP BAR.......*/
+#topbar {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding-top: 0.2em;
+  height: 2.4em;
+  background-color: #222f3e;
+  color: #ffffff;
+}
+
+#users {
+  float: right;
+  padding-right:1em;
+}
+#users a{
+  text-decoration: none;
+  color: #05c46b;
+}
+#topbar .logo, .navigation{
+  padding-top: 0.6em;
+}
+#topbar .logo #branding{
+  margin-left: 1.2em;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+
+#topbar .logo #branding .uniques{
+  color: #f1c40f;
+  font-size: 1.2em;
+  text-transform:uppercase;
+
+}
+#topbar .navigation > a{
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+}
+#topbar .navigation > a:hover{
+  cursor: pointer;
+  color: #05c46b;
+  padding-right: 0.5em;
+  transition: 0.2s ease-in;
+}
+#topbar .navigation > .current{
+  color: #f1c40f;
+  padding-right: 0.5em
+}
+#topbar .navigation .one_line{
+  padding-left: 2.5em;
+  display: inline-grid;
+}
+
+/*............THE BODY CONTENT STYLING..........*/
+#bodycontainer {
+  display: grid;
+  grid-template-columns: 4fr 6fr ;
+  height: 95vh;
+}
+
+#bodycontains{
+  display: grid;
+  grid-template: 6fr 4fr;
+  height: 95vh;
+}
+/*---------------SIDE NAVIGATOR STYLING---------------*/
+#bodycontainer .sidenavigator {
+  background-color: #f3f3f3;
+  color: #000000;
+
+}
+
+
+/*.....---------------------CONTENTS STYLING--------------.....*/
+.maincontents {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+}
+
+/*---------GEODETIC BASE MAP------*/
+#maparea {
+  width: 100%;
+  height: 100%;
+}
+
+/*-----------------RESPONSIVE DESIGN MODE-----------------------*/
+
+@media (max-width:480px) {
+  #bodycontainer .sidenavigator li{
+    padding-bottom: 0.4em;
+    padding-top:0.8em;
+  }
+  #bodycontainer .sidenavigator li > span{
+    display: none;
+  }
+}
+@media (max-width:768px){
+  #bodycontainer .sidenavigator li{
+    padding-bottom: 0.em;
+    padding-top:0.6em;
+  }
+  #bodycontainer .sidenavigator li > span{
+    font-size: 0.6em;
+    position: relative;
+    top: 0.6em;
+    right: 0.1em;
+  }
+  #bodycontainer .sidenavigator li > img{
+    position: relative;
+    left: 2em;
+    height: 20px;
+    width: 20px;
+  }
+  #bodycontainer .sidenavigator li > .except{
+      position: relative;
+      top: 1.0em;
+      right: 2em;
+  }
+}
